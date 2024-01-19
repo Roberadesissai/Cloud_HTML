@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-static {
+            position: static;
+            width: 100px;
+            height: 100px;;
+            background-color: red;
+        }
+
+        .box-relative {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            left: 50px;
+            top: 50px;
+            background-color: green;
+        }
+
+        .box-absolute {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 50px;
+            top: 50px;
+            background-color: blue;
+            z-index: -1;
+        }
+
+        .box-fixed {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            left: 200px;
+            top: 50px;
+            background-color: yellow;
+
+        }
+
+        .box-sticky {
+            position: sticky;
+            width: 100px;
+            height: 100px;
+            left: 50px;
+            top: 50px;
+            background-color: pink;
+        }
+
+        .box {
+            margin-top: 12px;
+            width: 500px;
+            height: 300px;
+            background-color: red;
+            position: relative;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            border-radius: 50%;
+            position: absolute;
+            top: 150px;
+            left: 250px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box-static">
+        <h4>Static</h4>
+    </div>
+    <div class="box-relative">
+        <h4>Relative</h4>
+    </div>
+    <div class="box-absolute">
+        <h4>Absolute</h4>
+    </div>
+    <div class="box-fixed">
+        <h4>Fixed</h4>
+    </div>
+    <div class="box-sticky">
+        <h4>Sticky</h4>
+    </div>
+
+    <div class="box">
+        <div class="circle">
+
+        </div>
+    </div>
+</body>
+
+</html>
