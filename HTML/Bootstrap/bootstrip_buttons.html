@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Bootstrap Buttons</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./assets/pulse.svg" width="20" alt="pulse">OSU AV</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Printing</a></li>
+                            <li><a class="dropdown-item" href="#">Fix and Repair</a></li>
+                            <li><a class="dropdown-item" href="#">PC Troubleshooting</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Hardware Upgrades</a></li>
+                            <li><a class="dropdown-item" href="#">Network Setup and Issues</a></li>
+                            <li><a class="dropdown-item" href="#">Data Recovery and Backup</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Custom Requests</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-primary">AV/Assistant<img src="./assets/chat.svg" width="15"
+                        alt="pulse">
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <!-- Assuming bootstrap-themes.png is an appropriate image for the service -->
+                <img src="./assets/AV.png" class="d-block mx-lg-auto img-fluid" alt="AV Help Desk Support" width="700"
+                    height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Expert AV Support When You Need It</h1>
+                <p class="lead">Our dedicated team provides fast, efficient troubleshooting and repair services for all
+                    your audiovisual needs. From software issues to hardware malfunctions, we ensure your equipment
+                    operates smoothly. Leverage our expertise for immediate assistance and preventive maintenance.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Get Help Now</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Our Featured Services</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <!-- Card 1: Technical Support -->
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('./assets/AV.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Immediate Technical Support</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="./assets/profile2.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill"></use>
+                                </svg>
+                                <small>Global</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3"></use>
+                                </svg>
+                                <small>Available Now</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Equipment Setup -->
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('./assets/AV.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Professional Equipment Setup</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="./assets/profile1.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill"></use>
+                                </svg>
+                                <small>On-Site Services</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3"></use>
+                                </svg>
+                                <small>Book Now</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Custom Solutions -->
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('./assets/AV.png');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Custom AV Solutions</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="./assets/profile3.png" alt="Bootstrap" width="32" height="32"
+                                    class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill"></use>
+                                </svg>
+                                <small>Customized for You</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3"></use>
+                                </svg>
+                                <small>Consultation Available</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Our Services</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <!-- Replace with an appropriate icon for technical support -->
+                    <img src="./assets/toggles2.svg" width="25" alt="cpu-fill">
+                </div>
+                <h3 class="fs-2 text-body-emphasis">Technical Support</h3>
+                <p>Expert assistance for all your technology needs. Whether it's software troubleshooting, hardware
+                    repairs, or general tech guidance, our team is ready to help.</p>
+                <a href="#" class="icon-link">
+                    Get Support
+                    <img src="./assets/chevron-compact-right.svg" width="25" alt="cpu-fill" class="chevron">
+                </a>
+            </div>
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <!-- Replace with an appropriate icon for customer service -->
+                    <img src="./assets/life-preserver.svg" width="25" alt="cpu-fill">
+                </div>
+                <h3 class="fs-2 text-body-emphasis">Customer Service</h3>
+                <p>Our customer service team is dedicated to providing you with timely and thoughtful responses to all
+                    inquiries. Your satisfaction is our top priority.</p>
+                <a href="#" class="icon-link">
+                    Contact Us
+                    <img src="./assets/chevron-compact-right.svg" width="25" alt="cpu-fill" class="chevron">
+                </a>
+            </div>
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <!-- Replace with an appropriate icon for advanced solutions -->
+                    <img src="./assets/cpu-fill.svg" width="25" alt="cpu-fill">
+                </div>
+                <h3 class="fs-2 text-body-emphasis">Advanced Solutions</h3>
+                <p>Looking for more than just basic fixes? We offer advanced solutions, including network setup, system
+                    optimization, and custom software installation.</p>
+                <a href="#" class="icon-link">
+                    Learn More
+                    <img src="./assets/chevron-compact-right.svg" width="25" alt="cpu-fill" class="chevron">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Our Team</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-body-emphasis bg-body-tertiary rounded-3 mb-3">
+                    <!-- Replace with an appropriate icon for technical support -->
+                    <img src="./assets/person-fill.svg" width="25" alt="cpu-fill">
+                </div>
+                <h3 class="fs-2 text-body-emphasis">John Doe</h3>
+                <p>John is a senior technician with over 10 years of experience in the AV industry. He specializes in
+                    troubleshooting and repair.</p>
+                <a href="#" class="icon-link">
+                    Contact
+                    <img src="./assets/chevron-compact-right.svg" width="25" alt="cpu-fill" class="chevron">
+                </a>
+            </div>
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-body-emphasis bg-body-tertiary rounded-3 mb-3">
+                    <!-- Replace with an appropriate icon for customer service -->
+                    <img src="./assets/person-fill.svg" width="25" alt="cpu-fill">
+                </div>
+                <h3 class="fs-2 text-body-emphasis">Jane Doe</h3>
+                <p>Jane is a junior technician with 3 years of experience in the AV industry. She specializes in
+                    customer service and technical support.</p>
+                <a href="#" class="icon-link">
+                    Contact
+                    <img src="./assets/chevron-compact-right.svg" width="25" alt="cpu-fill" class="chevron">
+                </a>
+            </div>
+            <div class="feature col">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-body-emphasis bg-body-tertiary rounded-3 mb-3">
+                    <!-- Replace with an appropriate icon for advanced solutions -->
+                    <img src="./assets/person-fill.svg" width="25" alt="cpu-fill">
+                </div>
+                <h3 class=" fs-2 text-body-emphasis">Jack Doe</h3>
+                <p>Jack is a senior technician with over 10 years of experience in the AV industry. He specializes in
+                    advanced solutions and custom requests.</p>
+                <a href="#" class="icon-link">
+                    Contact
+                    <img src="./assets/chevron-compact-right.svg" width="25" alt="cpu-fill" class="chevron">
+                </a>
+
+            </div>
+
+
+        </div>
+
+        <div class="footer-container">
+            <div class="container">
+                <footer class="py-5">
+                    <div class="row">
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Section</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Home</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Features</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">FAQs</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">About</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Repeated sections omitted for brevity -->
+
+                        <div class="col-md-5 offset-md-1 mb-3">
+                            <form>
+                                <h5>Subscribe to our newsletter</h5>
+                                <p>Monthly digest of what's new and exciting from us.</p>
+                                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                                    <input id="newsletter1" type="email" class="form-control"
+                                        placeholder="Email address">
+                                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                        <p>© 2023 Company, Inc. All rights reserved.</p>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24"
+                                        height="24"><!-- Placeholder for actual SVG content --></svg></a></li>
+                            <!-- SVG placeholders for social icons omitted for clarity -->
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

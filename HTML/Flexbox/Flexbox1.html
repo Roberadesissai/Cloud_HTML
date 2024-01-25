@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Detailed Examples</title>
+    <style>
+        .flex-container {
+            display: flex;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: lightgrey;
+        }
+        .flex-item {
+            background-color: cornflowerblue;
+            color: white;
+            margin: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Example 1: Row Direction */
+        .row { flex-direction: row; }
+
+        /* Example 2: Row Reverse Direction */
+        .row-reverse { flex-direction: row-reverse; }
+
+        /* Example 3: Column Direction */
+        .column { flex-direction: column; }
+
+        /* Example 4: Column Reverse Direction */
+        .column-reverse { flex-direction: column-reverse; }
+
+        /* Example 5: Wrap Items */
+        .wrap { flex-wrap: wrap; }
+
+        /* Example 6: Justify Content */
+        .justify-content { justify-content: space-between; }
+
+        /* Example 7: Align Items */
+        .align-items { align-items: center; height: 200px; }
+
+        /* Example 8: Flex Grow */
+        .flex-grow .flex-item { flex-grow: 1; }
+
+        /* Example 9: Flex Shrink */
+        .flex-shrink .flex-item { flex-basis: 100%; flex-shrink: 1; }
+
+        /* Example 10: Flex Basis */
+        .flex-basis .flex-item { flex-basis: 200px; }
+
+        /* Additional styles for clarity */
+        .flex-item:nth-child(odd) { background-color: darkseagreen; }
+    </style>
+</head>
+<body>
+
+<h2>1. Flex Direction: Row</h2>
+<div class="flex-container row">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+
+<h2>2. Flex Direction: Row Reverse</h2>
+<div class="flex-container row-reverse">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+
+<h2>3. Flex Direction: Column</h2>
+<div class="flex-container column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+
+<h2>4. Flex Direction: Column Reverse</h2>
+<div class="flex-container column-reverse">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+
+<h2>5. Flex Wrap: Wrap</h2>
+<div class="flex-container wrap" style="max-width: 200px;">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+
+<h2>6. Justify Content: Space Between</h2>
+<div class="flex-container justify-content">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+
+<h2>7. Align Items: Center</h2>
+<div class="flex-container align-items">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+
+<h2>8. Flex Grow: 1</h2>
+<div class="flex-container flex-grow">
+    <div class="flex-item">Grow 1</div>
+    <div class="flex-item">Grow 1</div>
+    <div class="flex-item">Grow 1</div>
+</div>
+
+<h2>9. Flex Shrink: 1</h2>
+<div class="flex-container flex-shrink" style="min-width: 600px;">
+    <div class="flex-item">Shrink</div>
+    <div class="flex-item">Shrink</div>
+    <div class="flex-item">Shrink</div>
+</div>
+
+<h2>10. Flex Basis: 200px</h2>
+<div class="flex-container flex-basis">
+    <div class="flex-item">Basis 200px</div>
+    <div class="flex-item">Basis 200px</div>
+    <div class="flex-item">Basis 200px</div>
+</div>
+
+</body>
+</html>

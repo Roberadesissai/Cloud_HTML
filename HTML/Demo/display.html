@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Display Property Example</title>
+<style>
+  /* Basic styling */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+  }
+  .container {
+    margin-bottom: 20px;
+  }
+  .block, .inline-block, .flex-item, .grid-item {
+    background-color: lightblue;
+    border: 1px solid darkblue;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  /* Display Block */
+  .block {
+    display: block;
+    width: 60%;
+  }
+
+  /* Display Inline */
+  .inline {
+    display: inline;
+    background-color: lightcoral;
+  }
+
+  /* Display Inline-Block */
+  .inline-block {
+    display: inline-block;
+    width: 100px;
+  }
+
+  /* Display None */
+  .hidden {
+    display: none;
+  }
+
+  /* Display Flex */
+  .flex-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* Display Grid */
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Display: block;</h2>
+<div class="container">
+    <div class="block">Block element (div)</div>
+    <div class="block">Block element (div)</div>
+    <p>Block elements take up the full width available, with a new line before and after.</p>
+</div>
+
+<h2>Display: inline;</h2>
+<div class="container">
+  <span class="inline">Inline element</span> <span class="inline">sits within</span> <span class="inline">a line of text.</span>
+  <p>Inline elements do not start on a new line and only take up as much width as necessary.</p>
+</div>
+
+<h2>Display: inline-block;</h2>
+<div class="container">
+  <div class="inline-block">Inline-block</div>
+  <div class="inline-block">elements</div>
+  <div class="inline-block">have block features.</div>
+  <p>Inline-block elements can have a width and height, but still sit inline with other elements.</p>
+</div>
+
+<h2>Display: none;</h2>
+<div class="container">
+  <div class="hidden">This element is hidden.</div>
+  <p>If you can read this, the "display: none" element above is not taking up space.</p>
+</div>
+
+<h2>Display: flex;</h2>
+<div class="flex-container">
+  <div class="flex-item">Flex item 1</div>
+  <div class="flex-item">Flex item 2</div>
+  <div class="flex-item">Flex item 3</div>
+</div>
+<p>Flex containers arrange their children horizontally or vertically with ease.</p>
+
+<h2>Display: grid;</h2>
+<div class="grid-container">
+  <div class="grid-item">Grid item 1</div>
+  <div class="grid-item">Grid item 2</div>
+  <div class="grid-item">Grid item 3</div>
+  <div class="grid-item">Grid item 4</div>
+</div>
+<p>Grid containers place their children into a two-dimensional layout with rows and columns.</p>
+
+</body>
+</html>

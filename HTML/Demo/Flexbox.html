@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Comprehensive Example</title>
+<style>
+  /* Navigation Bar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  .navbar a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+  }
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Media Object Styles */
+  .media {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-top: 20px; /* Added for spacing */
+  }
+  .media img {
+    margin-right: 20px;
+  }
+  .media-body {
+    flex: 1;
+  }
+
+  /* Responsive Grid Styles */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 20px; /* Added for spacing */
+  }
+  .grid-item {
+    background-color: #f2f2f2;
+    margin: 10px;
+    width: calc(33% - 20px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  /* Responsive adjustments for the grid */
+  @media (max-width: 600px) {
+    .grid-item {
+      width: calc(50% - 20px);
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="#home">Home</a>
+  <div>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+
+<!-- Media Object -->
+<div class="media">
+  <img src="https://via.placeholder.com/64" alt="Placeholder">
+  <div class="media-body">
+    <h5>Media Heading</h5>
+    <p>This is some content from a media component. You can replace this with any content you like.</p>
+  </div>
+</div>
+
+<!-- Responsive Grid -->
+<div class="grid">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>
+</div>
+
+</body>
+</html>
