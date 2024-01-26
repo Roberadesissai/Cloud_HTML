@@ -102,8 +102,13 @@
             border-radius: 5px;
             padding: 10px;
             overflow-y: auto;
-            height: 300px;
+            height: 600px;
         }
+
+        .modal-custom-width {
+            max-width: 700px; /* Customize this value */
+        }
+
 
         .message {
             padding: 8px 12px;
@@ -174,3 +179,13 @@
             display: inline-block;
             vertical-align: middle;
         }
+
+        .message ol {
+            padding-left: 20px; /* Indent items */
+            margin: 0; /* Remove default margin */
+        }
+        
+        .message li {
+            margin-bottom: 5px; /* Space between items */
+        }
+        
