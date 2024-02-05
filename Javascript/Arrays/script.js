@@ -50,7 +50,7 @@ document.querySelector('.demo').innerHTML += text;
 
 let box = '<div class="boxs">';
 for (let i = 0; i < flen; i++) {
-    box += '<div class=lists>' + cars[0][i] + '</div>';
+    box += '<div class=lists>' + cars[1][i] + '</div>';
 }
 box += '</div>';
 
@@ -68,14 +68,6 @@ function myFunction(value) {
 
 document.querySelector('.demo').innerHTML += text1;
 
-
-test = fruits1.forEach(myFunction2);
-
-function myFunction2(value) {
-    value = value 
-}
-
-document.querySelector('.demo').innerHTML += test;
 
 
 
