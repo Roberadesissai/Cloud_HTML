@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book finder and display the book image in the same web and the title</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f1356d;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #f1356d;
+        }
+
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow: hidden;
+            max-height: 400px;
+            overflow-y: scroll;
+        }
+
+        .book {
+            width: 20%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .book:hover {
+            background-color: #f4f4f4;
+        }
+
+        .book img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .book h2 {
+            margin-bottom: 5px;
+        }
+
+        .book p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Finder</h1>
+        <input type="text" id="search" placeholder="Search Book">
+        <button id="btn">Search</button>
+        <div id="result" class="book-container"></div>
+    </div>
+    <script>
+        const search = document.getElementById("search");
+        const btn = document.getElementById("btn");
+        const result = document.getElementById("result");
+
+        function searchBooks() {
+            fetch(`https://www.googleapis.com/books/v1/volumes?q=${search.value}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    let books = data.items.filter(item => item.volumeInfo.title.toLowerCase().includes(search.value.toLowerCase()));
+                    let html = "";
+                    books.forEach(book => {
+                        html += `
+                        <div class="book" onclick="displayBook('${book.id}')">
+                            <h2>${book.volumeInfo.title}</h2>
+                            <img src="${book.volumeInfo.imageLinks.thumbnail}">
+                            <p>${book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : ""}</p>
+                        </div>
+                        `;
+                    });
+                    result.innerHTML = html;
+                });
+        }
+
+        function displayBook(bookId) {
+            fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // Display book details
+                });
+        }
+
+        btn.addEventListener("click", searchBooks);
+
+        search.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                searchBooks();
+            }
+        });
+    </script>
+</body>
+</html>

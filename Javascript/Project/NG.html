@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generation in Javascript: Building a Love Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f1356d;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #f1356d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Love Calculator</h1>
+        <input type="text" id="name1" placeholder="Name 1">
+        <input type="text" id="name2" placeholder="Name 2">
+        <button id="btn">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const result = document.getElementById("result");
+
+        btn.addEventListener("click", () => {
+            const name1 = document.getElementById("name1").value;
+            const name2 = document.getElementById("name2").value;
+            console.log(name1, name2);
+
+            if (name1 && name2) {
+                const loveScore = Math.random() * 100;
+                result.innerHTML = `<h2>${name1} and ${name2} love each other ${loveScore.toFixed(2)}%</h2>`;
+            } else {
+                result.innerHTML = `<h2>Please enter both names</h2>`;
+            }
+        });
+
+        console.log(Math.floor(Math.random() * 10)+1);
+    </script>
+
+</body>
+
+</html>
