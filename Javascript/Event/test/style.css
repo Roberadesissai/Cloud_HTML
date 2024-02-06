@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    margin: 20px;
+    padding: 20px;
+}
+
+#clickExample,
+#changeExample,
+#mouseoverExample,
+#keydownExample {
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#mouseoverExample {
+    background-color: #f0f0f0;
+    text-align: center;
+}
