@@ -1,0 +1,43 @@
+// Select the button element with the class "roll"
+const button = document.querySelector(".roll");
+
+// Add a click event listener to the button
+button.addEventListener("click", function () {
+
+    // Generate a random number between 1 and 6
+    const randomNumber1 = Math.floor(Math.random() * 6) + 1;
+
+    // Create the path to the image based on the random number
+    const randomImage1 = "images/dice" + randomNumber1 + ".png";
+
+    // Select the first image element on the page
+    const image1 = document.querySelectorAll("img")[0];
+
+    // Set the source attribute of the first image to the random image path
+    image1.setAttribute("src", randomImage1);
+
+    __________________________________________________________________________________________________________
+
+    // Generate another random number between 1 and 6
+    const randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+    // Create the path to the second image based on the random number
+    const randomImage2 = "images/dice" + randomNumber2 + ".png";
+
+    // Select the second image element on the page
+    const image2 = document.querySelectorAll("img")[1];
+
+    // Set the source attribute of the second image to the random image path
+    image2.setAttribute("src", randomImage2);
+
+    // Compare the random numbers and display the result in the h1 element
+    if (randomNumber1 > randomNumber2) {
+        document.querySelector("h1").innerHTML = "🚩Player 1 Wins!";
+    } else if (randomNumber2 > randomNumber1) {
+        document.querySelector("h1").innerHTML = "Player 2 Wins!🚩";
+    } else {
+        document.querySelector("h1").innerHTML = "Draw!";
+    }
+});
+
+
