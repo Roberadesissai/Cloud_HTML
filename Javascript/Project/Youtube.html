@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video search from youtube and display all the image that related to the seach and add button that say play
+        the video</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f1356d;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #f1356d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Youtube Video Search</h1>
+        <input type="text" id="search" placeholder="Search Video">
+        <button id="btn" type="button">Search</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        const search = document.getElementById("search");
+        const btn = document.getElementById("btn");
+        const result = document.getElementById("result");
+
+        btn.addEventListener("click", () => {
+            result.innerHTML = "";
+            fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search.value}&key=AIzaSyD-8g6`)
+                .then((res) => res.json())
+                .then((data) => {
+                    data.items.forEach((item) => {
+                        const img = document.createElement("img");
+                        img.src = item.snippet.thumbnails.medium.url;
+                        result.appendChild(img);
+                        const button = document.createElement("button");
+                        button.innerHTML = "Play Video";
+                        button.addEventListener("click", () => {
+                            window.open(`https://www.youtube.com/watch?v=${item.id.videoId}`);
+                        });
+                        result.appendChild(button);
+                    });
+                });
+        });
+    </script>
+</body>
+
+</html>

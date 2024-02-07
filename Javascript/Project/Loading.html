@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animations</title>
+    <style>
+        .loading-animation {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        /* Rotating Circle */
+        .rotate-circle {
+            border: 6px solid #eee;
+            border-top: 6px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+
+        /* Bouncing Ball */
+        .bounce-ball {
+            display: inline-block;
+            background-color: #3498db;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            animation: bounce 2s infinite ease;
+        }
+
+        /* Loading Bar */
+        .loading-bar {
+            width: 50px;
+            height: 10px;
+            background-color: #eee;
+            position: relative;
+            animation: load 3s infinite ease-in-out;
+        }
+
+        .loading-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #3498db;
+            animation: loading 3s infinite ease-in-out;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes loading {
+
+            0%,
+            100% {
+                width: 0;
+            }
+
+            50% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loading-animation rotate-circle"></div>
+    <div class="loading-animation bounce-ball"></div>
+    <div class="loading-animation loading-bar"></div>
+
+</body>
+
+</html>
